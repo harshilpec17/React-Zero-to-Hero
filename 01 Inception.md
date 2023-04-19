@@ -31,3 +31,29 @@ One drawback of this method is that if a script depends on another script, it ma
 On the other hand, using the `defer` attribute allows for faster loading of the entire HTML page before executing the script. This method does not stop the rendering of the page and prevents errors from occurring.
 
 The main advantage of defer is that it loads the entire page, preventing errors from occurring. However, if there are multiple scripts using defer, they will all try to run after the page has loaded, which can significantly slow down page rendering.
+
+## what is emmet ?
+
+- Emmet is the web Development tools, which is available in VScode, sublime text, atom and many more text editor. It will make the writing process faster. Give the suggestion for code as well the shortcut notation for the syntax.
+- It will help to write HTML and CSS file very easily even in the nested form. providing automatic closing tag for the small syntax.
+
+## Difference between library and framework ?
+
+Library is small pre written code mostly function and classes which helps to simplified or make code faster. Library can control flow of the code as well the code modification can be done. it will increase the functionality of the code
+
+Frameworks are whole system to run the application, which has predefined APIs, compiler, toolkit. which have to use in the specific manner, mostly, you cannot modify the code of the framework. Framework has own set of control flow. It is very hard to incorporate framework in the existing project.
+
+## what is CDN ? why do we use it ?
+
+CDN stands for content delivery network, functionality of app or website hosted at main server, and CDN link distributed worldwide. Once user ask for the specific content, it will provide that functionality from nearest server. It will help to reduce delay the time as well lower bandwidth will require to fulfill the operation. Increasing reliability and availability of content, as the content is distributed across multiple servers
+Mitigating DDoS attacks by distributing the traffic across the CDN network.
+
+## what is crossorigin and script tag ?
+
+The crossorigin attribute is used in HTML `<script>` tags to indicate that the script file being loaded is intended to be used across different origins, such as when loading resources from a Content Delivery Network (CDN). The attribute allows the browser to enforce the Same-Origin Policy, which is a security measure to prevent scripts from accessing resources from a different domain or origin than the one it was loaded from.
+
+When the crossorigin attribute is present, the browser will request the script file with a CORS (Cross-Origin Resource Sharing) request header, which allows the server to determine whether the requesting origin is allowed to access the resource or not. If the server allows access, the resource will be loaded; otherwise, the browser will block the script from executing.
+
+The `<script>` tag is an HTML element used to include JavaScript code in a web page. It has a src attribute that specifies the URL of the script file to be loaded, and an optional type attribute that indicates the MIME type of the script content. In addition to the crossorigin attribute, the `<script>` tag also supports other attributes such as async and defer, which control the order and timing of script execution.
+
+In summary, the crossorigin attribute is used in the `<script>` tag to specify that the script file is intended to be used across different origins, and the `<script>` tag itself is used to include JavaScript code in a web page.
