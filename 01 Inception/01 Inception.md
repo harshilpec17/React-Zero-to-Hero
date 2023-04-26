@@ -54,6 +54,4 @@ The crossorigin attribute is used in HTML `<script>` tags to indicate that the s
 
 When the crossorigin attribute is present, the browser will request the script file with a CORS (Cross-Origin Resource Sharing) request header, which allows the server to determine whether the requesting origin is allowed to access the resource or not. If the server allows access, the resource will be loaded; otherwise, the browser will block the script from executing.
 
-The `<script>` tag is an HTML element used to include JavaScript code in a web page. It has a src attribute that specifies the URL of the script file to be loaded, and an optional type attribute that indicates the MIME type of the script content. In addition to the crossorigin attribute, the `<script>` tag also supports other attributes such as async and defer, which control the order and timing of script execution.
-
 In summary, the crossorigin attribute is used in the `<script>` tag to specify that the script file is intended to be used across different origins, and the `<script>` tag itself is used to include JavaScript code in a web page.
