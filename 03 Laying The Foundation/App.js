@@ -9,9 +9,9 @@ const Heading = React.createElement("div", { className: "title" }, [
 
 const HeadingComponent = () => (
   <div>
-    <h1 style={{ color: "red" }}>Hello from JSX</h1>
-    <h2 style={({ fontSize: "40px" }, { color: "blue" })}>Hello from JSX</h2>
-    <h3 style={{ fontStyle: "italic" }}>Hello from Jsx</h3>
+    <h1>Hello from JSX</h1>
+    <h2>Hello from JSX</h2>
+    <h3>Hello from Jsx</h3>
   </div>
 );
 const root = ReactDOM.createRoot(document.getElementById("root"));
