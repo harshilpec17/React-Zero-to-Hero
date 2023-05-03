@@ -2,9 +2,9 @@
 
 const Card = ({ resData }) => {
   
-  const {cloudinaryImageId, name,avgRating,deliveryTime,costForTwo,cuisines} = resData?.info || {};
+  const {cloudinaryImageId, locality,avgRating,deliveryTime,costForTwo,cuisines} = resData?.info || {};
   return (
-    <div className="card">
+    <div className="card flex">
     <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
       <div className="rounded overflow-hidden shadow-lg dark:shadow-gray-800">
         <img
@@ -16,7 +16,7 @@ const Card = ({ resData }) => {
           alt="Food Image"
         />
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{name}</div>
+          <div className="font-bold text-xl mb-2">{locality}</div>
           <p className="text-gray-700 dark:text-gray-300 text-base">
             Rating - {avgRating}
           </p>
