@@ -31,4 +31,16 @@
 
 ## why we need a keys in React ? when do we need keys in React ?
 
-- Keys will give the unique property
+- Keys will give the unique identity to the list of an element. It will be easy for React to update, delete, reuse the particular element in the React. It will make the process faster update. It will provide the stable identity inside the React.
+
+## can we use `index` as the keys in React ?
+
+- certainly, we can use the `index` as the `key`, However, It will lead to the problem when we modify or add the new component at the beginning of the list. React has to rerender whole list instead of particular component. It is costly operation. sometimes, it will re-render the data in the different order then the normal one.
+
+## what is props in React ? ways to
+
+- Props stands for the property, it is argument which is passed into the components. It is reusable state.
+
+## what is config driven UI ?
+
+- It the `Configure Driven User Interface`, which means, data are dynamically design rather than hard coded value. It is used to dynamically design webpages, where layout, components, data binding, layout and rules, can be dynamically controlled.
