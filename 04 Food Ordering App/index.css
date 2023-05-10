@@ -2,17 +2,24 @@
 
 body {
   margin: 0;
-  /* overflow-y: hidden; */
   font-family: Roboto;
-  display: flex;
 }
+
+.container {
+  display: flex;
+  margin: 40px;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .NavWrapper {
   display: flex;
   justify-content: space-around;
   gap: 200px;
   align-items: center;
   width: 100vw;
-  background-color: #7cb490;
+  background-color: #db7c38;
 }
 
 .CompanyLogo {
@@ -44,5 +51,3 @@ body {
   color: #fff;
   font-weight: 400;
 }
-
-
