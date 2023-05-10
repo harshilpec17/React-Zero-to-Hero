@@ -1,70 +1,34 @@
-## Create Nested header Element using React.createElement(h1,h2,h3 inside a div with class "title)
+## Is JSX is mandatory for React ?
 
-```Javascript
-const Heading = React.createElement("div", { className: "title" }, [
-  React.createElement("h1", { id: "h1" }, "Hello from h1"),
-  React.createElement("h2", { id: "h2" }, "Hello from h2"),
-  React.createElement("h3", { id: "h3" }, "Hello from h3"),
-]);
-```
+- JSX is the syntactic sugar for React, It is not the mandatory components, you can also use the plain Javascript to run the environment. When we use the JSX, we need compilation tool and special setup like `Bable` environment, which will convert code into production ready simple Javascript. on the other side (without JSX), we do not need special environment. we can use the react API to compile our code and use react functionality.
 
-## Create same element using JSX and pass attribute into it
+## Is ES6 is mandatory for the React ?
 
-```Javascript
-const HeadingComponent = (
-  <div className="title">
-    <h1 style={{ color: "red" }}>Hello from JSX</h1>
-    <h2 style={({ fontSize: "40px" }, { color: "blue" })}>Hello from JSX</h2>
-    <h3 style={{ fontStyle: "italic" }}>Hello from Jsx</h3>
-  </div>
-);
-```
+- ES6 is not mandatory for the React, we can use the classes and other functionality to write the code. but, es6 is widely using and safe for production. ES6 will give the functionality like, `Arrow function`, `template literal`, `classes`, `Destructuring`, `modules`. it will increase the productivity.
 
-## Create same element using functional component in JSX and pass attribute into it.
+## How can i write comment is JSX ?
 
-```Javascript
-const HeadingComponent = () => (
-  <div className="title">
-    <h1 style={{ color: "red" }}>Hello from JSX</h1>
-    <h2 style={({ fontSize: "40px" }, { color: "blue" })}>Hello from JSX</h2>
-    <h3 style={{ fontStyle: "italic" }}>Hello from Jsx</h3>
-  </div>
-);
-```
+- we can write the comment in the curly braces. It will not compile in the production area. or else, JSX will consider that as the string, it will break everything.
 
-## make composition inside component ( Add component inside another)
+## what is <React.Fragment></React.Fragment> and <></> ?
 
-```Javascript
-const ExtraComponent = () => (<h1>Extra component</h1>)
-const HeadingComponent = () => (
-  <div className="title">
-    <h1 style={{ color: "red" }}>Hello from JSX</h1>
-    <h2 style={({ fontSize: "40px" }, { color: "blue" })}>Hello from JSX</h2>
-    <ExtraComponent />
-    <h3 style={{ fontStyle: "italic" }}>Hello from Jsx</h3>
-  </div>
-);
-```
+- it will let a group a list without adding extra node to DOM. both are same with different notation.
 
-## `{TitleComponent}` vs `{TitleComponent()}` vs `{TitleComponent}{/TitleComponent}` in JSX
+## what is virtualDOM ?
 
-```Javascript
-const HeadingComponent = () => (
-  <div className="title">
-    <h1 style={{ color: "red" }}>Hello from JSX</h1>
-    <h2 style={({ fontSize: "40px" }, { color: "blue" })}>Hello from JSX</h2>
-    <h3 style={{ fontStyle: "italic" }}>Hello from Jsx</h3>
-  </div>
-);
+- It is concept where ideal `virtualDOM` it is the UI memory, and synced with the `RealDOM`. it called reconciliation. It will enable the declarative API of the react. You can tell the react to update particular state, it will update to realDOM. It is cost effective process where, Real DOM will keep the memory of previous update and when new update of any UI come, it will only update the particular state.
+- Virtual DOM is additional layer between, real DOM and file.
 
-// All will work same
+## what is Reconciliation in React ?
 
-root.render(
-  <>
-    {HeadingComponent}
-    <HeadingComponent />
-    {HeadingComponent()}
-    {<HeadingComponent></HeadingComponent>}
-  </>
-);
-```
+- When we use the React virtual DOM to update the UI of the webpage, It will update the particular part of webpage. However, re-rendering of whole page is very costly operation. React will predict which state will be update by using diffing algorithm.
+- It will check the difference between previous update and new update.when new update come, Instead of breaking off whole DOM tree. React will keep the memory of it. Once it update the new state, it will quickly check previous memory and update particular state.
+- React will check the `key` of sibling and keep the memory of it. once new node has added it will do the mutation to the previous memory instead rebuild the DOMTree.
+
+## what is React fibre ?
+
+- prior 2016, React is using call stack method for executing the task. It is creating the problem to update the UI of the webpage. Now, React using React-fibre. which will make the execution asynchronous. Now, React can decide to priority to certain task. Pause the task, reuse the same DOM tree, and abort the execution is three main aspect of it.
+
+## why we need a keys in React ? when do we need keys in React ?
+
+- Keys will give the unique property
