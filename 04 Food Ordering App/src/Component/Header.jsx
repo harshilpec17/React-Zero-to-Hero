@@ -1,10 +1,12 @@
+import { LOGO_URL } from "../utils/constant";
+
 const Header = () => {
     return (
         <>
         <div>
             <div className="NavWrapper">
                 <div className="logo">
-                    <img src="https://www.freeiconspng.com/uploads/food-delivery-19.png" alt="logo" className="CompanyLogo" />
+                    <img src={LOGO_URL} alt="logo" className="CompanyLogo" />
                 </div>
                 <div className="NavItems">
                     <ul>

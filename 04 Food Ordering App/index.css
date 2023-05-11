@@ -19,7 +19,7 @@ body {
   gap: 200px;
   align-items: center;
   width: 100vw;
-  background-color: #db7c38;
+  background-color: #dc3f2a;
 }
 
 .CompanyLogo {
@@ -41,6 +41,9 @@ body {
   font-weight: 400;
 }
 
+.NavItems ul li:hover {
+  color: #000;
+}
 .btn {
   padding: 5px 20px;
   margin: 10px;
@@ -50,4 +53,14 @@ body {
   background: #000000;
   color: #fff;
   font-weight: 400;
+}
+
+.btn:hover {
+  background: #7d53cc;
+}
+
+.filter-btn {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #000;
 }
