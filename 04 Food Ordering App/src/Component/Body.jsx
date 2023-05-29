@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Body = () => {
   const [newList, setNewList] = useState(restObj);
-  const [typedText, setTypedText] = useState("");
+  const [search, setSearch] = useState("");
   return (
     <>
       <div className="wrapper">
@@ -35,20 +35,16 @@ const Body = () => {
             type="search"
             id="searchBar"
             placeholder="Find a Spot"
-            value={typedText}
-            onChange={(text) => setTypedText(text.target.value)}
+            value={search}
+            onChange={(text) => setSearch(text.target.value)}
           />
           <button
             className="btn"
             onClick={() => {
-              const search = newList.filter((text) => { for(i = 0; i < text.info.name.length; i++){
-                if(text.info.name[i].toLowerCase == typedText.toLowerCase)
-                return text;
-              }
-              
-              });
-              setNewList(search);
-              console.log(search);
+              let filterData = newList.filter((e) =>
+                e.info.name.toLowerCase().includes(search)
+              );
+              setNewList(filterData);
             }}
           >
             Search
